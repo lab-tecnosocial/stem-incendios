@@ -15,11 +15,15 @@ st.image("cerrotunari.jpg")
 url = "https://www.meteoblue.com/es/tiempo/historyclimate/weatherarchive/cochabamba_bolivia_3919968"
 
 st.write("""
+         
+         
          Al ser un prototipo, esto puede ser aplicado a cualquier departamento, país, municipio y si se obtienen los datos necesarios, se puede llegar hasta la división más pequeña de territorio que se pueda imaginar. Esto puede ser usado con este proyecto, solamente reemplazando la base de datos.
          
          Dichos datos (para el departamento de Cochabamba) pueden ser encontrados con el mismo formato en el siguiente sitio: [MeteoBlue](%s)
          
          Por favor, ingresar los datos en la pestaña de la izquierda. Se encuentran llenos por defecto con datos cuyo proposito es ejemplificar. 
+         
+         
          """%url)
 
 data=pd.read_csv("Data_clima_Clasificaction.csv")
@@ -53,6 +57,9 @@ if graph_type:
     sns.heatmap(df.corr(), annot=True, cmap="bwr", fmt=".2f", linewidths=.5)
     # Display the plot
     st.pyplot(fig)
+           
+           
+           
            
 #GRADIENT BOOSTING 
 
@@ -104,4 +111,23 @@ else:
     st.write("Existe una :green[**baja**] probabilidad de riesgo de incendio")
     
 
+for i in range(10):
+    st.write("")
+    
+
+st.markdown("""
+<style>
+.big-font {
+    position: absolute !important;
+    font-size:13px !important;
+    line-height:5px !important;
+    right:100px !important;
+}
+</style>
+""", unsafe_allow_html=True)
+st.markdown('<p class="big-font">INFO</p>', unsafe_allow_html=True)
+st.markdown('<p class="big-font">Olimpiadas STEM+ 2023</p>', unsafe_allow_html=True)
+st.markdown('<p class="big-font">Grupo: TecnoBanda</p>', unsafe_allow_html=True)
+st.markdown('<p class="big-font">Colegio San Agustín</p>', unsafe_allow_html=True)
+st.markdown('<p class="big-font">CBBA - Bolivia</p>', unsafe_allow_html=True)
 
