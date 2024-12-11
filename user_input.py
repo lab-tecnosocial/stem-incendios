@@ -4,101 +4,101 @@ import pandas as pd
 
 def user_input():
 
-    on = st.toggle("Datos default para dia con incendio", value=False)
+    on = st.toggle("Datos predeterminados para día con incendio", value=False)
     st.write("")
     if on:
         column_1 = st.number_input(
-            ("**Cloud Cover High [high cld lay]**"), value=87.38)
+            ("**Nubosidad Alta [capa alta de nubes]**"), value=87.38)
         column_2 = st.number_input(
-            ("**Direct Shortwave Radiation**"), value=5922)
+            ("**Radiación Solar Directa**"), value=5922)
         column_3 = st.number_input(
-            ("**FAO Reference Evapotranspiration [2 m]**"), value=6.29)
+            ("**Evapotranspiración de Referencia FAO [2 m]**"), value=6.29)
         column_4 = st.number_input(
-            ("**Relative Humidity [2 m]**"), value=78.22)
+            ("**Humedad Relativa [2 m]**"), value=78.22)
         column_5 = st.number_input(
-            ("**Relative Humidity [2 m]_1**"), value=20.71)
+            ("**Humedad Relativa [2 m]_1**"), value=20.71)
         column_6 = st.number_input(
-            ("**Relative Humidity [2 m]_2**"), value=48.08)
+            ("**Humedad Relativa [2 m]_2**"), value=48.08)
         column_7 = st.number_input(
-            ("**Soil Moisture [28-100 cm down]**"), value=0.17)
+            ("**Humedad del Suelo [28-100 cm de profundidad]**"), value=0.17)
         column_8 = st.number_input(
-            ("**Soil Moisture [28-100 cm down]_10**"), value=0.17)
+            ("**Humedad del Suelo [28-100 cm de profundidad]_10**"), value=0.17)
         column_9 = st.number_input(
-            ("**Soil Moisture [28-100 cm down]_9**"), value=0.17)
+            ("**Humedad del Suelo [28-100 cm de profundidad]_9**"), value=0.17)
         column_10 = st.number_input(
-            ("**Soil Moisture [7-28 cm down]**"), value=0.15)
+            ("**Humedad del Suelo [7-28 cm de profundidad]**"), value=0.15)
         column_11 = st.number_input(
-            ("**Soil Moisture [7-28 cm down]_7**"), value=0.15)
+            ("**Humedad del Suelo [7-28 cm de profundidad]_7**"), value=0.15)
         column_12 = st.number_input(
-            ("**Soil Moisture [7-28 cm down]_8**"), value=0.15)
+            ("**Humedad del Suelo [7-28 cm de profundidad]_8**"), value=0.15)
         column_13 = st.number_input(
-            ("**Soil Temperature [100-255 cm down]**"), value=21.41)
+            ("**Temperatura del Suelo [100-255 cm de profundidad]**"), value=21.41)
         column_14 = st.number_input(
-            ("**Soil Temperature [100-255 cm down]_3**"), value=21.36)
+            ("**Temperatura del Suelo [100-255 cm de profundidad]_3**"), value=21.36)
         column_15 = st.number_input(
-            ("**Soil Temperature [100-255 cm down]_4**"), value=21.38)
-        column_16 = st.number_input(("**Temperature**"), value=48.76)
+            ("**Temperatura del Suelo [100-255 cm de profundidad]_4**"), value=21.38)
+        column_16 = st.number_input(("**Temperatura**"), value=48.76)
         column_17 = st.number_input(
-            ("**Temperature [2 m elevation corrected]**"), value=31.44)
+            ("**Temperatura [2 m corregida por elevación]**"), value=31.44)
         column_18 = st.number_input(
-            ("**Temperature [2 m elevation corrected]_1**"), value=31.44)
+            ("**Temperatura [2 m corregida por elevación]_1**"), value=31.44)
         column_19 = st.number_input(
-            ("**Temperature [2 m elevation corrected]_2**"), value=11.76)
-        column_20 = st.number_input(("**Temperature_5**"), value=11.76)
-        column_21 = st.number_input(("**Temperature_6**"), value=26.32)
+            ("**Temperatura [2 m corregida por elevación]_2**"), value=11.76)
+        column_20 = st.number_input(("**Temperatura_5**"), value=11.76)
+        column_21 = st.number_input(("**Temperatura_6**"), value=26.32)
         column_22 = st.number_input(
-            ("**Vapor Pressure Deficit [2 m]**"), value=32.22)
+            ("**Déficit de Presión de Vapor [2 m]**"), value=32.22)
         column_23 = st.number_input(
-            ("**Vapor Pressure Deficit [2 m]_1**"), value=3.75)
+            ("**Déficit de Presión de Vapor [2 m]_1**"), value=3.75)
         column_24 = st.number_input(
-            ("**Vapor Pressure Deficit [2 m]_2**"), value=15.04)
+            ("**Déficit de Presión de Vapor [2 m]_2**"), value=15.04)
     else:
         column_1 = st.number_input(
-            ("**Cloud Cover High [high cld lay]**"), value=56.083332)
+            ("**Nubosidad Alta [capa alta de nubes]**"), value=56.083332)
         column_2 = st.number_input(
-            ("**Direct Shortwave Radiation**"), value=4145)
+            ("**Radiación Solar Directa**"), value=4145)
         column_3 = st.number_input(
-            ("**FAO Reference Evapotranspiration [2 m]**"), value=3.8626044)
+            ("**Evapotranspiración de Referencia FAO [2 m]**"), value=3.8626044)
         column_4 = st.number_input(
-            ("**Relative Humidity [2 m]**"), value=79.176346)
+            ("**Humedad Relativa [2 m]**"), value=79.176346)
         column_5 = st.number_input(
-            ("**Relative Humidity [2 m]_1**"), value=22.599285)
+            ("**Humedad Relativa [2 m]_1**"), value=22.599285)
         column_6 = st.number_input(
-            ("**Relative Humidity [2 m]_2**"), value=53.568966)
+            ("**Humedad Relativa [2 m]_2**"), value=53.568966)
         column_7 = st.number_input(
-            ("**Soil Moisture [28-100 cm down]**"), value=0.272)
+            ("**Humedad del Suelo [28-100 cm de profundidad]**"), value=0.272)
         column_8 = st.number_input(
-            ("**Soil Moisture [28-100 cm down]_10**"), value=0.27166668)
+            ("**Humedad del Suelo [28-100 cm de profundidad]_10**"), value=0.27166668)
         column_9 = st.number_input(
-            ("**Soil Moisture [28-100 cm down]_9**"), value=0.271)
+            ("**Humedad del Suelo [28-100 cm de profundidad]_9**"), value=0.271)
         column_10 = st.number_input(
-            ("**Soil Moisture [7-28 cm down]**"), value=0.21)
+            ("**Humedad del Suelo [7-28 cm de profundidad]**"), value=0.21)
         column_11 = st.number_input(
-            ("**Soil Moisture [7-28 cm down]_7**"), value=0.209)
+            ("**Humedad del Suelo [7-28 cm de profundidad]_7**"), value=0.209)
         column_12 = st.number_input(
-            ("**Soil Moisture [7-28 cm down]_8**"), value=0.20966671)
+            ("**Humedad del Suelo [7-28 cm de profundidad]_8**"), value=0.20966671)
         column_13 = st.number_input(
-            ("**Soil Temperature [100-255 cm down]**"), value=17.17)
+            ("**Temperatura del Suelo [100-255 cm de profundidad]**"), value=17.17)
         column_14 = st.number_input(
-            ("**Soil Temperature [100-255 cm down]_3**"), value=17.16)
+            ("**Temperatura del Suelo [100-255 cm de profundidad]_3**"), value=17.16)
         column_15 = st.number_input(
-            ("**Soil Temperature [100-255 cm down]_4**"), value=17.165834)
-        column_16 = st.number_input(("**Temperature**"), value=34.45)
+            ("**Temperatura del Suelo [100-255 cm de profundidad]_4**"), value=17.165834)
+        column_16 = st.number_input(("**Temperatura**"), value=34.45)
         column_17 = st.number_input(
-            ("**Temperature [2 m elevation corrected]**"), value=25.449104)
+            ("**Temperatura [2 m corregida por elevación]**"), value=25.449104)
         column_18 = st.number_input(
-            ("**Temperature [2 m elevation corrected]_1**"), value=9.179106)
+            ("**Temperatura [2 m corregida por elevación]_1**"), value=9.179106)
         column_19 = st.number_input(
-            ("**Temperature [2 m elevation corrected]_2**"), value=16.546602)
-        column_20 = st.number_input(("**Temperature_5**"), value=3.81)
+            ("**Temperatura [2 m corregida por elevación]_2**"), value=16.546602)
+        column_20 = st.number_input(("**Temperatura_5**"), value=3.81)
         column_21 = st.number_input(
-            ("**Temperature_6**"), value=14.822918)
+            ("**Temperatura_6**"), value=14.822918)
         column_22 = st.number_input(
-            ("**Vapor Pressure Deficit [2 m]**"), value=22.088408)
+            ("**Déficit de Presión de Vapor [2 m]**"), value=22.088408)
         column_23 = st.number_input(
-            ("**Vapor Pressure Deficit [2 m]_1**"), value=2.0883007)
+            ("**Déficit de Presión de Vapor [2 m]_1**"), value=2.0883007)
         column_24 = st.number_input(
-            ("**Vapor Pressure Deficit [2 m]_2**"), value=9.108302)
+            ("**Déficit de Presión de Vapor [2 m]_2**"), value=9.108302)
 
     data = {
         "Cloud Cover High [high cld lay]": column_1,
