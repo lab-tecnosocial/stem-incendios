@@ -12,7 +12,7 @@ st.set_page_config(page_title="Riesgo de Incendio",
 if 'data' not in st.session_state:
     st.session_state.data = pd.read_csv("Data_clima_Clasificaction.csv")
 
-st.header("PREDICCIÓN DE RIESGO DE INCENDIO EN EL DEPARTAMENTO DE COCHABAMBA")
+st.title("🔥 Predicción de riesgo de incendio en Cochabamba 🔥")
 
 with stylable_container(
     key="intro",
@@ -71,8 +71,7 @@ with col2:
         # Predictions
         model = st.session_state.model
         prediction = model.predict(dataframe.to_numpy())
-
-        with st.container(height=200):
+        with st.container(key="resultados", height=200):
             st.write("Resultado de la predicción: " + str(prediction[0]))
 
             if int(prediction) == 1:
@@ -89,7 +88,7 @@ with col2:
             st.write("Esperando datos para realizar la predicción.")
 
     # button with callback
-    st.button("Predecir", on_click=predict_callback)
+    st.button("Predecir", on_click=predict_callback, type="secondary")
 
 for i in range(10):
     st.write("")
